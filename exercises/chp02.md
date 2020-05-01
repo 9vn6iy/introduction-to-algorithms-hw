@@ -90,8 +90,8 @@ for j = 1 to A.length - 1
 显然线性查找最好情况是A[1] = v，最坏情况是A[n] = v;
 
 - 平均需要检查元素个数为![tex13](assets/tex13.svg)，平均运行时间![tex14](assets/tex14.svg)
-- 最坏情况$n$，最坏情况运行时间![tex14](assets/tex14.svg)
-- 最好情况$1$，最好情况运行时间![tex15](assets/tex15.svg)
+- 最坏情况n，最坏情况运行时间![tex14](assets/tex14.svg)
+- 最好情况1，最好情况运行时间![tex15](assets/tex15.svg)
 
 ### 2.2-4
 
