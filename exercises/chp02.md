@@ -62,7 +62,7 @@ C[1] = c
 
 ### 2.2-1
 
-$T(n) = \theta(n^3)$
+![](./assets/latex1.svg)
 
 ### 2.2-2
 
@@ -81,17 +81,17 @@ for j = 1 to A.length - 1
 - 保持：在任一循环开始前，通过min(A, j, A.length)找到A中第j小的元素，将其与A的第j个元素进行交换，因此，A中第1小的元素在位置1，第2小的元素在位置2，以此类推，则A[1..j - 1]中元素为A中前j小的元素，且已经排序，循环不变式成立
 - 终止：当j = A.length - 1时，A[1..j]元素均已排序，且A[j]元素为A中最大的元素，且已经在位置n上，则整个数组已经排序，循环不变式成立，这也解释了为什么循环只需要到n-1而不是n。
 
-显然，swap函数的运行时间固定为$\theta(n)$；因此算法的最好运行时间和最坏运行时间均为$\theta(n^2)$。
+显然，swap函数的运行时间固定为<img src="assets/tex12.svg" alt="tex12" style="zoom:67%;" />；因此算法的最好运行时间和最坏运行时间均为<img src="assets/tex11.svg" alt="tex11" style="zoom:67%;" />。
 
-- 因为无论数组是否已经排序，min操作和swap操作都要进行。
+- 因为无论数组是否已经排序，MIN操作和SWAP操作都要进行。
 
 ### 2.2-3
 
 显然线性查找最好情况是A[1] = v，最坏情况是A[n] = v;
 
-- 平均需要检查元素个数为$(1 + n) / 2$，平均运行时间$T(n) = \theta(n)$
-- 最坏情况$n$，最坏情况运行时间$T(n) = \theta(n)$
-- 最好情况$1$，最好情况运行时间$T(n) = \theta(1)$
+- 平均需要检查元素个数为<img src="assets/tex13.svg" alt="tex13" style="zoom: 67%;" />，平均运行时间<img src="assets/tex14.svg" alt="tex14" style="zoom:67%;" />
+- 最坏情况$n$，最坏情况运行时间<img src="assets/tex14.svg" alt="tex14" style="zoom:67%;" />
+- 最好情况$1$，最好情况运行时间<img src="assets/tex15.svg" alt="tex15" style="zoom:67%;" />
 
 ### 2.2-4
 
@@ -131,29 +131,19 @@ while j < n2
 
 证明：
 
-- 当$n=2$，$T(n) = 2 = 2lg2$
-- 当$n = 2^k$，$T(n) = 2^klg(2^k)=k2^k$
-- 只需证，当$n=2^{k+1}$时，有$T(n)=2^{k+1}lg(2^{k+1})=(k+1)2^{k+1}$
+- 当<img src="assets/tex17.svg" alt="tex17" style="zoom:67%;" />，<img src="./assets/tex02.svg" style="zoom:67%;" />
+- 当<img src="assets/tex16.svg" alt="tex16" style="zoom:67%;" />，<img src="assets/tex03.svg" alt="$$" style="zoom:67%;" />
+- 只需证，当<img src="assets/tex04.svg" style="zoom:67%;" />时，有<img src="assets/tex05.svg" style="zoom:67%;" />
 
 证明：
-$$
-\begin{align}
-\because T(n) &= 2T(n/2) + n \\
-\therefore T(2^{k+1})&=2T(2^k) + 2^{k+1} \\
-\because T(2^k) &= k2^k \\
-\therefore T(2^{k+1}) &= 2 \times k2^k + 2^{k+1} \\
-	&=k2^{k+1} + 2^{k+1} \\
-    &=(k+1)2^{k+1}
-\end{align}
-$$
+
+<img src="assets/tex06.svg" alt="tex06" style="zoom:67%;" />
+
 证毕
 
 ### 2.3-4
 
-$$
-T(n) = \begin{cases} \theta(1), & \text {if $n$ = 1} \\ 
-		T(n-1) + \theta(n), & \text {if n > 1} \end{cases}
-$$
+<img src="assets/tex07.svg" alt="tex07" style="zoom:67%;" />
 
 ### 2.3-5
 
@@ -193,11 +183,10 @@ else
 ```
 
 根据伪代码，可写出递归式：
-$$
-T(n) = \begin{cases} \theta(1), & \text {if $A[mid] = v$} \\ 
-		T(n/2) + \theta(1), & \text {else} \end{cases}
-$$
-显然可知，当最大迭代次数为$k = lg(n)$时，$T(n)=\theta(1)$，即算法结束，因此算法的最坏运行时间为$T(n)=\theta(lgn)$。
+
+<img src="assets/tex08.svg" alt="tex08" style="zoom:67%;" />
+
+显然可知，当最大迭代次数为<img src="assets/tex18.svg" alt="tex18" style="zoom:67%;" />时，<img src="assets/tex15.svg" alt="tex15" style="zoom:67%;" />，即算法结束，因此算法的最坏运行时间为<img src="assets/tex19.svg" alt="tex19" style="zoom:67%;" />。
 
 ### 2.3-6
 
@@ -217,7 +206,7 @@ for j = 2 to A.length
 
 分析：
 
-1. 先对$S$进行归并排序，对序列$S$中的每个元素$e$，在$S$中利用二分查找法查找$x - e$是否存在
+1. 先对S进行归并排序，对序列S中的每个元素$e$，在S中利用二分查找法查找x-e是否存在
 
 FIND-SUM(A, x)
 
@@ -231,10 +220,10 @@ for i = 1 to A.length
 return NIL
 ```
 
-2. 将序列$S$分为两部分$S_1$和$S_2$，则两数a和b的和刚好为x就有三种情况：
+2. 将序列S分为两部分<img src="assets/tex09.svg" alt="tex09" style="zoom:67%;" />和<img src="assets/tex10.svg" alt="tex10" style="zoom:67%;" />，则两数a和b的和刚好为x就有三种情况：
 
-- a和b都在$S_1$部分
+- a和b都在<img src="assets/tex09.svg" alt="tex09" style="zoom:67%;" />部分
 
-- a和b都在$S_2$部分
+- a和b都在<img src="assets/tex10.svg" alt="tex10" style="zoom:67%;" />部分
 
-- a在$S_1$部分，b在$S_2$部分
+- a在<img src="assets/tex09.svg" alt="tex09" style="zoom:67%;" />部分，b在<img src="assets/tex10.svg" alt="tex10" style="zoom:67%;" />部分

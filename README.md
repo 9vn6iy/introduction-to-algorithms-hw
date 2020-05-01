@@ -8,5 +8,5 @@ MIT 6.046J课后练习，《Introducion to Algorithms》3th 答案整理
 
 教材课后练习：
 
-- [第二章](./exercises/chp02)
+- [第二章](https://github.com/9vn6iy/introduction-to-algorithms-hw/blob/master/exercises/chp02)
 
