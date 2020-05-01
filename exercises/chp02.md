@@ -131,7 +131,7 @@ while j < n2
 
 证明：
 
-- 当<img src="assets/tex17.svg" alt="tex17" style="zoom:67%;" />，<img src="./assets/tex02.svg" style="zoom:67%;" />
+- 当<img src="assets/tex17.svg" alt="tex17"  />，<img src="./assets/tex02.svg" style="zoom:67%;" />
 - 当<img src="assets/tex16.svg" alt="tex16" style="zoom:67%;" />，<img src="assets/tex03.svg" alt="$$" style="zoom:67%;" />
 - 只需证，当<img src="assets/tex04.svg" style="zoom:67%;" />时，有<img src="assets/tex05.svg" style="zoom:67%;" />
 
