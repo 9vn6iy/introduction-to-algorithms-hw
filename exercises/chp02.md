@@ -62,9 +62,7 @@ C[1] = c
 
 ### 2.2-1
 
-![]--(./assets/latex1.svg)
-
-![](https://microsoft.codecogs.com/svg.latex?T(n)=\theta(n^3))
+![](./assets/latex1.svg)
 
 ### 2.2-2
 
